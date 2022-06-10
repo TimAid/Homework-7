@@ -21,14 +21,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let firstVC = ViewController()
             let secondVC = SecondViewController()
-                
+            
+            let person = Person.getContacts()
+            firstVC.personInfo = person
+            secondVC.personInfo = person
+            
+            
             //Навигация
             let navigationFirstVC = UINavigationController(rootViewController: firstVC)
             let navigationSecondVC = UINavigationController(rootViewController: secondVC)
+            
         
-        
-            let tabBarVC = UITabBarController()
+            let tabBarVC = TabBarController()
+//            let tabBarVC = UITabBarController()
             tabBarVC.setViewControllers([navigationFirstVC, navigationSecondVC], animated: true)
+            
         
             window.rootViewController = tabBarVC
             window.backgroundColor = .white

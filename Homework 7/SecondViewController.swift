@@ -45,32 +45,25 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell : UITableViewCell
+        let cell = myTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-//        let person = personInfo[indexPath.section]
+        let person = personInfo[indexPath.section]
         
-        if indexPath.section%2 == 0 {
+        var content = cell.defaultContentConfiguration()
+
+        switch indexPath.row {
             
-            cell = myTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-            var content = cell.defaultContentConfiguration()
-            let index = indexPath.row/2
-            print(index)
-            content.text = "\(index)" //personInfo.email[index]
+        case 0:
+            content.text = person.phoneNumber
             content.image = UIImage(systemName: "phone")
-            cell.contentConfiguration = content
-            return cell
-            
-        }
-            cell = myTableView.dequeueReusableCell(withIdentifier: identifierNum , for: indexPath)
-            var content = cell.defaultContentConfiguration()
-            let index = (indexPath.row - 1) / 2
-            print(index)
-        content.text = "\(indexPath.section)"
-        
-        //personInfo.phoneNumber[index]
+        default:
+            content.text = person.email
             content.image = UIImage(systemName: "tray")
-            cell.contentConfiguration = content
-            return cell
+        }
+        
+        cell.contentConfiguration = content
+        return cell
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

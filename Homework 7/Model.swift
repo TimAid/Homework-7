@@ -4,9 +4,9 @@
 //
 //  Created by Aid on 08.06.2022.
 //
+import Foundation
 
 struct Person {
-    
     
     var name : String
     var surname : String
@@ -14,7 +14,7 @@ struct Person {
     var email : String
     
     var fullName : String {
-        return "\(name)  \(surname)"
+        "\(name)  \(surname)"
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var myTableView = UITableView()
-    let identifier = "myCell"
+    let identifier1 = "myCell"
     var personInfo : [Person] = []
     
     override func viewDidLoad() {
@@ -28,9 +28,10 @@ class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSou
     //MARK: Create table
     func createTable() {
         
-        self.myTableView = UITableView(frame: view.bounds, style: .plain)
+        self.myTableView = UITableView(frame: view.bounds, style: .insetGrouped)
         
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier1)
+        
         myTableView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -41,7 +42,7 @@ class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSou
     //MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier1, for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         let personInformation = personInfo[indexPath.row]
@@ -51,8 +52,12 @@ class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSou
 
         return cell
     }
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
             return personInfo.count
-        }
+    }
 
 }
