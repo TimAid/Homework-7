@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D0FB9E82851C14400460FC3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FB9E72851C14400460FC3 /* SecondViewController.swift */; };
 		0D7C744E28537631007F6E97 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C744D28537631007F6E97 /* TabBarController.swift */; };
+		0D7C745228537EEE007F6E97 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C745128537EEE007F6E97 /* DetailViewController.swift */; };
 		0D960989285074060087DD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D960988285074060087DD34 /* AppDelegate.swift */; };
 		0D96098B285074060087DD34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96098A285074060087DD34 /* SceneDelegate.swift */; };
 		0D96098D285074060087DD34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96098C285074060087DD34 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0D0FB9E72851C14400460FC3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0D7C744D28537631007F6E97 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0D7C745128537EEE007F6E97 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0D960985285074060087DD34 /* Homework 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D960988285074060087DD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D96098A285074060087DD34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				0D960988285074060087DD34 /* AppDelegate.swift */,
 				0D96098A285074060087DD34 /* SceneDelegate.swift */,
 				0D96098C285074060087DD34 /* ViewController.swift */,
+				0D7C745128537EEE007F6E97 /* DetailViewController.swift */,
 				0D7C744D28537631007F6E97 /* TabBarController.swift */,
 				0D0FB9E72851C14400460FC3 /* SecondViewController.swift */,
 				0D96099C2850741A0087DD34 /* Model.swift */,
@@ -157,6 +160,7 @@
 				0D7C744E28537631007F6E97 /* TabBarController.swift in Sources */,
 				0D0FB9E82851C14400460FC3 /* SecondViewController.swift in Sources */,
 				0D96099D2850741A0087DD34 /* Model.swift in Sources */,
+				0D7C745228537EEE007F6E97 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

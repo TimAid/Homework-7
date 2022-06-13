@@ -17,13 +17,13 @@ class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         
         self.title = "contacts"
-        navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "Persons List"
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+//        self.tabBarItem.image = UIImage(systemName: "person.circle")
+        self.tabBarController?.tabBarItem.image = UIImage(systemName: "person.circle")
+        view.backgroundColor = .white
         createTable()
     }
-
-
     
     //MARK: Create table
     func createTable() {
@@ -46,7 +46,7 @@ class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSou
         var content = cell.defaultContentConfiguration()
         
         let personInformation = personInfo[indexPath.row]
-        print(personInformation)
+//        print(personInformation)
         content.text = personInformation.fullName
         cell.contentConfiguration = content
 
@@ -59,5 +59,13 @@ class ViewController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
             return personInfo.count
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.person = personInfo[indexPath.row]
+        show(detailVC, sender: nil)
+    }
 
 }
+    

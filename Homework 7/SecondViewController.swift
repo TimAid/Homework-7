@@ -12,14 +12,15 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var personInfo : [Person] = []
     var myTableView = UITableView()
     let identifier = "infoCell"
-    let identifierNum = "cell"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "contacts"
-        self.navigationItem.title = "Person List"
+        self.navigationItem.title = "Persons info"
         navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarItem.image = UIImage(systemName: "person.crop.circle.fill")
         view.backgroundColor = .white
     
         createTable()
@@ -28,9 +29,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func createTable() {
     
-        myTableView = UITableView(frame: self.view.bounds, style: .plain)
+        myTableView = UITableView(frame: self.view.bounds, style: .insetGrouped)
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: identifierNum)
         myTableView.delegate = self
         myTableView.dataSource = self
         

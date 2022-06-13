@@ -19,12 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+            
             let firstVC = ViewController()
             let secondVC = SecondViewController()
-            
+//            let detailVC = DetailViewController()
             let person = Person.getContacts()
+            
             firstVC.personInfo = person
             secondVC.personInfo = person
+//            detailVC.personInfo = person
             
             
             //Навигация

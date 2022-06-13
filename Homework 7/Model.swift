@@ -25,7 +25,6 @@ extension Person {
         var persons : [Person] = []
         
         let names = DataManager.shared.nameArray.shuffled()
-        print(names)
         let surnames = DataManager.shared.surnameArray.shuffled()
         let emails = DataManager.shared.emailArray.shuffled()
         let phoneNumbers = DataManager.shared.phoneNumberArray.shuffled()
